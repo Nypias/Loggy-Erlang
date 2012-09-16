@@ -26,7 +26,7 @@ loop(Name, Log, Peers, Sleep, Jitter) ->
 	stop ->
 	    ok;
 	Error ->
-	    Log ! {log, Name, Time, {error, Error}}
+	    Log ! {log, Name, time, {error, Error}}
     after Wait ->
 	    Selected = select(Peers),
 	    Time = na,
